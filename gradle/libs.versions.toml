@@ -1,13 +1,22 @@
 [versions]
 agp = "8.7.3"
-kotlin = "2.0.0"
+kotlin = "2.0.21"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
-composeBom = "2024.04.01"
+composeBom = "2024.11.00"
+jetbrainsKotlinJvm = "2.0.0"
+appcompat = "1.7.0"
+material = "1.12.0"
+protobuf = "4.26.1"
+protobufPlugin = "0.9.4"
+androidxDataStore = "1.1.1"
+hilt = "2.52"
+ksp = "2.0.21-1.0.25"
+kotlinxCoroutines = "1.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,9 +33,27 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version.ref = "protobuf" }
+protobuf-protoc = { group = "com.google.protobuf", name = "protoc", version.ref = "protobuf" }
+androidx-dataStore = { group = "androidx.datastore", name = "datastore", version.ref = "androidxDataStore" }
+androidx-dataStore-core = { group = "androidx.datastore", name = "datastore-core", version.ref = "androidxDataStore" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+hilt-core = { group = "com.google.dagger", name = "hilt-core", version.ref = "hilt" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+protobuf = { id = "com.google.protobuf", version.ref = "protobufPlugin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 

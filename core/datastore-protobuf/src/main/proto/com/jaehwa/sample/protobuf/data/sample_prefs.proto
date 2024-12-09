@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "com.jaehwa.sample.protobuf.core.datastore";
+option java_multiple_files = true;
+
+message SamplePreferences {
+  int32 id = 1;
+  string data = 2;
+}

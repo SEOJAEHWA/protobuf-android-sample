@@ -11,6 +11,8 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+@Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -19,5 +21,11 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ProtoBuf_DataStore"
+rootProject.name = "protobuf-android-sample"
 include(":app")
+include(":core:datastore")
+include(":core:model")
+include(":core:datastore-protobuf")
+include(":core:datastore-test")
+include(":core:common")
+include(":core:data")
