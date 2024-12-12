@@ -19,13 +19,14 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:common"))
-    implementation(project(":core:model"))
-    implementation(project(":core:datastore"))
+    api(project(":core:common"))
+    api(project(":core:datastore"))
 
     implementation(libs.hilt.core)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
     testImplementation(libs.junit)
+    testImplementation(project(":core:datastore-test"))
+    testImplementation(libs.kotlinx.coroutines.test)
 }
